@@ -37,7 +37,7 @@ jobs:
           token: ${{secrets.TELEGRAM_TOKEN}}
           message: |
             ${{ github.actor }} создал Pull Request:
-            Описание: ${{ github.event.commits[0].message }}
+            Описание: ${{ github.event.pull_request.body }}
             
             
             Посмотреть: https://github.com/${{ github.repository }}/commit/${{github.sha}}
