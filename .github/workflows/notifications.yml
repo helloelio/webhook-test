@@ -36,8 +36,9 @@ jobs:
           to: ${{secrets.TELEGRAM_CHAT_ID}}
           token: ${{secrets.TELEGRAM_TOKEN}}
           message: |
-            ${{ github.actor }} создал Pull Request:
-            Описание: ${{ github.event.pull_request.body }}
+            ${{ github.actor }} создал новый Pull Request 🛠:
+            📘 Название: ${{github.event.pull_request.title}}
+            ✏️ Описание: ${{ github.event.pull_request.body }}
             
             
-            Посмотреть: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            👀 Посмотреть: https://github.com/${{ github.repository }}/commit/${{github.sha}}
